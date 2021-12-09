@@ -1,4 +1,4 @@
-from math_series.series import fibonacci_function, lucas_function
+from math_series.series import fibonacci_function, lucas_function, sum_series
 import pytest
 
 
@@ -26,5 +26,17 @@ def test_lucas_eight():
   expected = 29
   assert actual == expected
 
+def test_sum_series():
+  actual = sum_series(8, 4, 3)
+  expected = 115
+  assert actual == expected
 
- 
+def test_sum_series_lucas():
+  actual = sum_series(6, 2, 1)
+  expected = 18
+  assert actual == expected
+
+def test_sum_series_fibonacci():
+  actual = sum_series(8)
+  expected = 21
+  assert actual == expected
